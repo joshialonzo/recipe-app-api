@@ -23,3 +23,6 @@ Recipe app API source code.
 
 #### Run tests locally
     docker-compose run app sh -c "python manage.py test"
+
+#### Run tests and linter locally
+    docker-compose run app sh -c "python manage.py test && flake8"
