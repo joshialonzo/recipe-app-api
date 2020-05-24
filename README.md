@@ -20,3 +20,6 @@ Recipe app API source code.
 
 #### Create Django project
     docker-compose run app sh -c "django-admin startproject app ."
+
+#### Run tests locally
+    docker-compose run app sh -c "python manage.py test"
