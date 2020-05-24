@@ -17,3 +17,6 @@ Recipe app API source code.
 
 #### Build images from Docker Compose
     docker-compose build
+
+#### Create Django project
+    docker-compose run app sh -c "django-admin startproject app ."
