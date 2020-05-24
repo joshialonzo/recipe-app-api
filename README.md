@@ -12,6 +12,9 @@ Recipe app API source code.
 #### Build Docker image
     docker build .
 
+### Remove Docker containers
+    docker system prune
+
 #### Clean Docker completely
     docker system prune --all --force --volumes
 
@@ -26,3 +29,6 @@ Recipe app API source code.
 
 #### Run tests and linter locally
     docker-compose run app sh -c "python manage.py test && flake8"
+
+#### Create Django core app
+    docker-compose run app sh -c "python manage.py startapp core"
