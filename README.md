@@ -11,3 +11,9 @@ Recipe app API source code.
 
 #### Build Docker image
     docker build .
+
+#### Clean Docker completely
+    docker system prune --all --force --volumes
+
+#### Build images from Docker Compose
+    docker-compose build
