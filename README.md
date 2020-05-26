@@ -35,3 +35,6 @@ Recipe app API source code.
 
 #### Run Django migrations
     docker-compose run app sh -c "python manage.py makemigrations core"
+
+#### Run Django application
+    docker-compose up
