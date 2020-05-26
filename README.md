@@ -41,3 +41,9 @@ Recipe app API source code.
 
 #### Create Django superuser
     docker-compose run app sh -c "python manage.py createsuperuser"
+
+#### Run container and delete container after stopping
+    docker-compose run --rm app sh -c "python manage.py runserver 0.0.0.0:8000"
+
+#### Create Django user app and delete container after stopping
+    docker-compose run --rm app sh -c "python manage.py startapp user"
