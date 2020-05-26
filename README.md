@@ -47,3 +47,6 @@ Recipe app API source code.
 
 #### Create Django user app and delete container after stopping
     docker-compose run --rm app sh -c "python manage.py startapp user"
+
+#### Run tests and linter locally and delete container after stopping
+    docker-compose run --rm app sh -c "python manage.py test && flake8"
