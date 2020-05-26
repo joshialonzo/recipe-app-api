@@ -6,8 +6,13 @@ ENV PYTHONUNBUFFERED 1
 
 # copy requirements file from host to container
 COPY ./requirements.txt /requirements.txt
+# install postgres server client
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+    gcc libc-dev linux-headers postgresql-dev
 # install all python packages
 RUN pip install -r /requirements.txt
+RUN apk del .tmp-build-deps
 
 # create app folder
 RUN mkdir /app
